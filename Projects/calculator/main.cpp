@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 int pos()
 {
@@ -33,5 +33,37 @@ int main()
     std::cout << "На сбережения лучше отложить" << safe << symbol << "\n";
     std::cout << "Их можно положить в акции, облигации, крипту, предпологаемая годовая доходность:" 
     << procent << procents << plusminus << boost << symbol;
+    return 0;
+}
+*/
+
+#include <iostream>
+
+//Функция вычисления остатка от заработной платы
+int ost()
+{
+    int salary {};
+    int spend {};
+    std::cout << "Введите вашу заработную плату:" << "\n";
+    std::cin >> salary;
+    std::cout << "Введите ваши обязательные траты" << "\n";
+    std::cin >> spend;
+    int ostatok {salary-spend};
+    return ostatok;
+}
+
+//Функция вычисления доходности по банковскому депозиту
+int main()
+{
+    int fre {ost()};
+    std::cout << "Ваш остаток:" << fre << "\n";
+    int precent {20};
+    char procent {'%'};
+    int deposit {fre*0.2};
+    int up {deposit*1.2};
+    std::cout << "20% От ваших свободных средств предлагаем положить в банковский вклад, годовая доходность:" <<
+    precent << procent << "\n";
+    std::cout << "Депозит к концу года:" << up << "\n";
+    std::cout << "Чистая прибыль:" << up - deposit;
     return 0;
 }
