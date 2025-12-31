@@ -1,0 +1,9 @@
+#include <iostream>
+
+int GetInteger()
+{
+	std::cout << "Введите целое число:";
+	int x{};
+	std::cin >> x;
+	return x;
+}
