@@ -1,0 +1,1 @@
+#define CRYPTO "bitcoin"
